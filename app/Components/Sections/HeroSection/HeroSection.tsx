@@ -68,13 +68,13 @@ function HeroSection() {
               href="#services"
               className="hidden mouse-animation lg:flex justify-center items-center"
             >
-              <Image
+              {/* <Image
                 className="rounded-lg"
                 src="/images/logo1.png"
                 alt="logo"
                 width={700}
                 height={400}
-              />
+              /> */}
             </Link>
           </div>
         </div>
