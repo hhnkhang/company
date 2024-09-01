@@ -41,10 +41,10 @@ function HeroSection() {
           {search}
         </button>
       </nav>
-      <div className="mt-[7rem]  md:mt-[7rem] px-[18rem]">
-        <div className="gradient-purple mb-4 py-2 rounded-tl-[12px] rounded-br-[12px]">
+      <div className="mt-[7rem]  md:mt-[7rem] px-[18rem] mq-sections">
+        <div className="gradient-green mb-4 py-2 rounded-tl-[12px] rounded-br-[12px]">
           <p className="font-medium text-white">
-            ENKAY'S-Your trusted real estate partner
+            ENKAY'S - Your trusted Real Estate partner
           </p>
         </div>
         <h1 className="text-3xl md:text-6xl">
@@ -52,36 +52,38 @@ function HeroSection() {
         </h1>
         <div className="mt-6 flex flex-col gap-10 lg:flex-row">
           <Image
-            className="rounded-lg"
+            className="rounded-lg mt-4 object-cover"
             src="/images/house1.jpg"
             alt="house1"
-            width={500}
-            height={200}
+            width={700}
+            height={800}
           />
-          <div>
-            <div>
+          <div className="lg:mt-12 flex flex-col justify-between  text-gray-300">
+            <div className="flex flex-col gap-4 md:gap-6">
               <h3 className="text-white text-2xl font-semibold">
                 Re-inventing the Art of Real Estate
               </h3>
               <p>
                 ENKAY'S Real Estate Group is #1 in the Santa Barbara MLS for
                 transactions with over $1 Billion in sales. For nearly two
-                decades Calcagno & Hamilton has been the top-producing real
-                estate team in Montecito and the greater Santa Barbara region
+                decades ENKAY'S has been the top-producing real estate team in
+                Montecito and the greater Santa Barbara region
               </p>
-              <button>
-                <span>explore</span>
-                {arrowRight}
-                <span className="blob">dsdsd</span>
-              </button>
+              <div className=" relative cta-button self-start">
+                <Link href="/services" className="flex items-center gap-4">
+                  <span>Explore more </span>
+                  {arrowRight}
+                  <span className="blob "></span>
+                </Link>
+              </div>
             </div>
             <Link
-              href="#services"
+              href="/services"
               className="hidden mouse-animation lg:flex justify-center items-center"
             >
               <Image
                 className="rounded-lg"
-                src="/images/arrow_d.jpg"
+                src="/images/long_down.svg"
                 alt="arrow"
                 width={10}
                 height={10}

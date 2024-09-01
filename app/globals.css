@@ -21,11 +21,43 @@ h1 {
   @apply text-3xl font-bold text-white;
 }
 
-.gradient-purple {
+.gradient-green {
   display: inline-block;
   justify-content: center;
   align-items: center;
-  background: #1f5351;
+  @apply bg-gradient-to-r from-teal-800 to-emerald-500;
   padding: 10px;
-  border-radius: 12px;
+
+  border-top-right-radius: 2px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 40px;
 }
+
+.cta-button {
+  @apply inline-block px-8 py-4 text-white font-semibold bg-gradient-to-r from-teal-800 to-emerald-500 rounded-[2rem] overflow-hidden;
+}
+
+.blob {
+  position: absolute;
+  bottom: -4rem;
+  right: -3.5rem;
+  width: 6rem;
+  height: 6rem;
+  background: lime;
+  border-radius: 50%;
+  opacity: 0.3;
+  transition: 0.4s ease-in-out;
+}
+.cta-button:hover .blob {
+  transform: scale(2);
+}
+.cta-button:hover {
+  @apply bg-gradient-to-r  from-emerald-500 to-teal-800;
+}
+.mouse-animation {
+  @apply w-[38px] h-[68px] border rounded-full animate-bounce;
+}
+
+
+/*media queries
+
