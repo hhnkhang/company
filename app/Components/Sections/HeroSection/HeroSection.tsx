@@ -1,14 +1,22 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import { navLinks } from "@/app/utils/utils";
 import Link from "next/link";
-import { arrowRight, search } from "@/app/utils/Icons";
+import { arrowRight, email, phone, search } from "@/app/utils/Icons";
+import { motion } from "framer-motion";
 
 function HeroSection() {
   const arr = Array(4).fill(0);
+  const [navOpen, setNavOpen] = React.useState(false);
+
+  const navX = {
+    hidden: { x: "-100%" },
+    visible: { x: 0 },
+  };
   return (
     <section className="relative h-full w-full">
-      <div className="absolute w-full h-[100vh] top-0 flex justify-evenly z-[-1]">
+      <div className="fixed w-full h-[100vh] top-0 flex justify-evenly z-[-1]">
         {arr.map((_, i) => {
           return (
             <div key={i} className="relative w-[0.5px] h-full bg-2">
@@ -20,7 +28,7 @@ function HeroSection() {
 
       <nav
         className="px-[18rem] fixed md:relative top-0 z-50 w-full shadow-md md:shadow-none flex justify-between bg-3
-      border-b border-colour-1"
+      border-b border-colour-1 mq-sections items-center"
       >
         <div className="flex items-center gap-2 py-5 lg:py-0">
           <Image src="/images/logo1.png" alt="logo" width={100} height={100} />
@@ -40,6 +48,15 @@ function HeroSection() {
         <button className="hidden lg:inline-block py-6 px-10 text-2xl text-gray-400 border-x border-colour1 hover:bg-2 transition-all duration-200 ease-in-out">
           {search}
         </button>
+        {/* nemu for small scr */}
+        <div
+          className="lg:hidden  flex flex-col gap-1 cursor-pointer"
+          onClick={() => setNavOpen(!navOpen)}
+        >
+          <div className="w-8 h-1 bg-emerald-500 rounded-md"></div>
+          <div className="w-8 h-1  bg-emerald-500  rounded-md"></div>
+          <div className="w-8 h-1  bg-emerald-500  rounded-md"></div>
+        </div>
       </nav>
       <div className="mt-[7rem]  md:mt-[7rem] px-[18rem] mq-sections">
         <div className="gradient-green mb-4 py-2 rounded-tl-[12px] rounded-br-[12px]">
@@ -92,6 +109,53 @@ function HeroSection() {
           </div>
         </div>
       </div>
+
+      {/* nav for smaller scr */}
+
+      {navOpen && (
+        <motion.div
+          className="px-8 fixed z-50 flex flex-col gap-8 left-0 top-0 w-[18rem] h-[100vh] bg-2 lg:hidden 
+        "
+          initial="hidden"
+          animate={navOpen ? "visible" : "hidden"}
+          transition={{ duration: 0.3 }}
+          variants={navX}
+        >
+          <div className="flex items-center gap-2 py-5 lg:py-0">
+            <Image
+              src="/images/logo1.png"
+              alt="logo"
+              width={100}
+              height={100}
+            />
+            <h1> ENKAY'S</h1>
+          </div>
+          <nav className="bg-4 px-4 py-4 rounded-md">
+            <ul className="flex flex-col gap-4 text-white font-medium">
+              {navLinks.map((link, i) => {
+                return (
+                  <li key={i}>
+                    <Link
+                      href={link.url}
+                      className="inline-block w-full hover:text-emerald-500 transition-all duration-300 ease-in-out"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
+          <div className="flex flex-col gap-2">
+            <p className="flex items-center gap-2 text-white font-medium">
+              {phone}0383349001
+            </p>
+            <p className="flex items-center gap-2 text-white font-medium break-all">
+              {email}nguyenkhang.hhnkhang@gmail.com
+            </p>
+          </div>
+        </motion.div>
+      )}
     </section>
   );
 }
