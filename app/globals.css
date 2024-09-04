@@ -9,6 +9,7 @@
   --colour--bg-4: #323232;
   --colour--border-1: #323232;
   --colour--border-2: #2a2a2a;
+  --colour--border-3: #10b981;
   --colour--bg-5: green;
 }
 
@@ -27,10 +28,6 @@ h1 {
   align-items: center;
   @apply bg-gradient-to-r from-teal-800 to-emerald-500;
   padding: 10px;
-
-  border-top-right-radius: 2px;
-  border-top-left-radius: 40px;
-  border-bottom-right-radius: 40px;
 }
 
 .cta-button {

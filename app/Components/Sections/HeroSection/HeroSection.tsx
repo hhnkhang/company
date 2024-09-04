@@ -16,11 +16,11 @@ function HeroSection() {
   };
   return (
     <section className="relative h-full w-full">
-      <div className="fixed w-full h-[100vh] top-0 flex justify-evenly z-[-1]">
+      <div className="absolute w-full h-[100vh] top-0 flex justify-evenly z-[-1]">
         {arr.map((_, i) => {
           return (
             <div key={i} className="relative w-[0.5px] h-full bg-2">
-              <span className="absolute bottom-0 w-2 h-2 bg-orange-200 left-0 translate-x-[-50%] rounded-full"></span>
+              <span className="absolute bottom-0 w-2 h-2 bg-gray-500 left-0 translate-x-[-50%] rounded-full"></span>
             </div>
           );
         })}
@@ -59,7 +59,7 @@ function HeroSection() {
         </div>
       </nav>
       <div className="mt-[7rem]  md:mt-[7rem] px-[18rem] mq-sections">
-        <div className="gradient-green mb-4 py-2 rounded-tl-[12px] rounded-br-[12px]">
+        <div className="gradient-green mb-4 py-2 rounded-tl-[20px] rounded-br-[20px] border border-colour-1 ">
           <p className="font-medium text-white">
             ENKAY'S - Your trusted Real Estate partner
           </p>
