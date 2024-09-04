@@ -1,5 +1,5 @@
 import { url } from "inspector";
-import { desktop, growth, innovation } from "./Icons";
+import { desktop, growth, home, human, innovation, money } from "./Icons";
 
 export const navLinks = [
   {
@@ -36,39 +36,39 @@ interface IService {
 
 export const services: IService[] = [
   {
-    title: "Digital Strategy & Consulting",
-    icon: growth,
+    title: "Know how much you can afford",
+    icon: money,
     description:
-      "Develop a robust digital strategy that aligns with your business goals. Our expert consultants will guide you through the process, ensuring your brand stays ahead in the digital landscape.",
+      "We'll help you estimate how much you can afford to spend on a home",
     bulletPoints: [
-      "Tailored digital strategies for your brand",
+      "Connect with a lender to help determine your homebuying budget",
       "In-depth market and competitor analysis",
-      "Expert guidance on emerging trends",
-      "Alignment of digital initiatives with business goals",
+      "Understand your monthly costs",
+      "Get help with your down payment",
     ],
   },
   {
-    title: "UX/UI Design & Web Development",
-    icon: desktop,
+    title: "Get professional help in your home search",
+    icon: human,
     description:
-      "Create a seamless user experience with our expert UX/UI design and web development services. We craft visually stunning and highly functional websites that engage users and drive conversions.",
+      "We'll connect you with a local agent who can explore neighborhoods, find homes that fit your needs, and stay on budget.",
     bulletPoints: [
-      "User-centered UX/UI design",
-      "Responsive and accessible web development",
-      "Custom website and application solutions",
-      "Optimization for performance and speed",
+      "We have a team of humans to support you",
+      "Local agent connections",
+      "We work with thousands of agents nationwide",
+      "We connect you with an agent for free",
     ],
   },
   {
-    title: "Innovative Product Development",
-    icon: innovation,
+    title: "Real value",
+    icon: home,
     description:
-      "Transform your ideas into market-ready products. Our team specializes in creating innovative solutions that drive growth and give you a competitive edge.",
+      "Find out how you can sell without listing or stay in your home while you finance the purchase of your next one.",
     bulletPoints: [
-      "End-to-end product design and development",
-      "Rapid prototyping and iteration",
-      "Integration of cutting-edge technologies",
-      "Focus on user needs and market demands",
+      "Get current property estimates for your home",
+      "Explore projects that could add the most value to your home",
+      "Calculate an estimate of how much you could make selling your home",
+      "Find skilled pros near you to assist you with your next remodeling project",
     ],
   },
 ];

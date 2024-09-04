@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../../Title/Title";
 import { services } from "@/app/utils/utils";
+import { check } from "@/app/utils/Icons";
 
 function ServicesSection() {
   return (
@@ -13,8 +14,28 @@ function ServicesSection() {
               key={index}
               className="relative p-10 flex-col text-white  border border-colour-3 rounded-xl"
             >
-              <div className="bg-2 self-start w-[5rem] h-[5rem] flex justify-center items-center rounded-xl border border-colour-1 shadow-sm">
+              <div className="bg-2 self-start w-[5rem] h-[5rem] flex justify-center items-center rounded-xl border border-colour-3 shadow-sm">
                 <span className="text-2xl text-gray-200">{services.icon}</span>
+              </div>
+              <div>
+                <h3 className="py-6 font-semibold text-2xl">
+                  {services.title}
+                </h3>
+
+                {/* LIST */}
+                <ul className="pt-6 flex flex-col gap-3">
+                  {services.bulletPoints.map((point, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center gap-3 text-gray-300"
+                      >
+                        {check}
+                        <span>{point}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             </div>
           );
