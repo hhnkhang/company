@@ -18,6 +18,18 @@ body {
   @apply text-gray-200;
 }
 
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--colour--bg-4);
+  border-radius: 7px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--colour--bg-2);
+}
+
 h1 {
   @apply text-3xl font-bold text-white;
 }

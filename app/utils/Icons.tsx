@@ -19,3 +19,6 @@ export const email = <i className="fa-solid fa-envelope"></i>;
 export const money = <i className="fa-solid fa-dollar-sign"></i>;
 export const human = <i className="fa-solid fa-people-arrows"></i>;
 export const home = <i className="fa-solid fa-city"></i>;
+export const globe = <i className="fa-solid fa-globe"></i>;
+export const friend = <i className="fa-solid fa-user-group"></i>;
+export const building = <i className="fa-solid fa-building"></i>;
