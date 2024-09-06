@@ -9,6 +9,8 @@ import {
   money,
 } from "@/app/utils/Icons";
 import Button from "../../Buttons/Button";
+import Image from "next/image";
+import { aboutStats } from "@/app/utils/utils";
 
 function AboutSection() {
   return (
@@ -66,7 +68,39 @@ function AboutSection() {
             <Button label="SEE DETAILS" icon={arrowRight} />
           </div>
         </div>
-        <div></div>
+        <div className="relative p-5">
+          <div className="relative">
+            <Image
+              src="/images/us.png"
+              alt="about us"
+              width={600}
+              height={400}
+              className="w-full rotate-6 rounded-lg hover:rotate-0 transition-all duration-500 ease-in-out"
+            />
+
+            <div className="absolute top-0 left-0 w-full h-full -rotate-3  bg-blue-200 z-[-1] rounded-lg"></div>
+            <div className="absolute top-0 left-0 w-full h-full bg-orange-300 z-[-1] rounded-lg"></div>
+            <div className="absolute top-0 left-0 w-full h-full rotate-3 bg-emerald-300 z-[-2] rounded-lg"></div>
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-16 py-[6rem] grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-8 border-t-2">
+        {aboutStats.map((stat, index) => {
+          return (
+            <div
+              key={index}
+              className="flex flex-col gap-2 md:gap-4 items-center justify-center text-center"
+            >
+              <h1
+                className={`text-6xl font-extrabold text-emerald-400 ${stat.ff}`}
+              >
+                {stat.count}
+              </h1>
+              <p className="text-gray-200 text-2xl">{stat.title}</p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );

@@ -1,5 +1,10 @@
 import { url } from "inspector";
 import { desktop, growth, home, human, innovation, money } from "./Icons";
+import { Bungee_Outline } from "next/font/google";
+export const bungee = Bungee_Outline({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 export const navLinks = [
   {
@@ -70,5 +75,29 @@ export const services: IService[] = [
       "Calculate an estimate of how much you could make selling your home",
       "Find skilled pros near you to assist you with your next remodeling project",
     ],
+  },
+];
+
+export const aboutStats = [
+  {
+    title: "Happy Customers",
+    count: "450.000+",
+    ff: bungee.className,
+  },
+
+  {
+    title: "Real Estate channel on Youtube",
+    count: "#1",
+  },
+
+  {
+    title: "Annual visits in 2023",
+    count: "52M",
+    ff: bungee.className,
+  },
+
+  {
+    title: "Job opportunities were created annually",
+    count: "1.1M+",
   },
 ];
