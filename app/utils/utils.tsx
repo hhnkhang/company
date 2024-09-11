@@ -101,3 +101,20 @@ export const aboutStats = [
     count: "1.1M+",
   },
 ];
+
+export const baseText = [
+  {
+    text: "Unrivaled marketing",
+  },
+  {
+    text: "Exclusive partnerships",
+    outline: bungee.className,
+  },
+  {
+    text: "Unmatched service",
+  },
+  {
+    text: "Public relations powerhouse",
+    outline: bungee.className,
+  },
+];

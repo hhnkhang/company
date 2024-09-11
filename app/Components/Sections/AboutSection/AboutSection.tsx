@@ -14,8 +14,8 @@ import { aboutStats } from "@/app/utils/utils";
 
 function AboutSection() {
   return (
-    <section className="pt-[5rem] pb-16 mq-sections">
-      <Title title="WHO WE ARE" label="Our Story" />
+    <section className="relative pb-16 mq-sections">
+      <Title title="Who we are" label="Our Story" />
       <div className="mt-[5rem] grid grid-cols-1 gap-12 lg:grid-cols-2">
         <div>
           <h1 className="text-2xl">
