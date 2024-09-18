@@ -34,6 +34,10 @@ h1 {
   @apply text-3xl font-bold text-white;
 }
 
+h3 {
+  @apply text-xl font-bold text-gray-200;
+}
+
 .gradient-green {
   display: inline-block;
   justify-content: center;

@@ -1,5 +1,16 @@
 import { StaticImageData } from "next/image";
-import imageSm1 from "@/public/images/house2.png";
+import imageSm1 from "@/public/images/house1_1.png";
+import imageSm3 from "@/public/images/house1_3.png";
+import imageSm2 from "@/public/images/house1_2.png";
+import imageSm4 from "@/public/images/house1_4.png";
+import imageSm5 from "@/public/images/house1_5.png";
+import imageSm6 from "@/public/images/house1_6.png";
+
+import imageSm2_1 from "@/public/images/house2_1.png";
+import imageSm2_2 from "@/public/images/house2_2.png";
+import imageSm2_3 from "@/public/images/house2_3.png";
+import imageSm2_4 from "@/public/images/house2_4.png";
+import imageSm2_5 from "@/public/images/house2_5.png";
 interface IPortfolio {
   id: number;
   title: string;
@@ -9,12 +20,13 @@ interface IPortfolio {
   previewImage: StaticImageData;
   bgColor?: string;
   challenges?: string[];
-  client?: string;
+  property_type?: string;
+  locations?: string[];
   projectDetails?: string;
   link: string;
   details: {
     paragraphs: string[];
-    bulletPoints: string[];
+    bulletPoints: { label: string; value: string | null }[];
     images: StaticImageData[];
     footer: string;
   };
@@ -25,49 +37,51 @@ const portfolios: IPortfolio[] = [
     id: 1,
     category: "Switzerland",
     title: "Gingins, Vaud, 1276 Switzerland",
-    subtitle: "Single Family Homes",
-    date: "June 2023",
+    subtitle: "An exceptional property near Geneva",
+    date: "June 2024",
     previewImage: imageSm1,
-    link: "snippetmaster",
+    link: "gingins-gingins",
     bgColor: "bg-[#C6AFA2]",
-    client: "Clean Code Inc.",
+    property_type: "Single Family Homes",
+    locations: ["Switzerland"],
     details: {
       paragraphs: [
-        "SnippetMaster is an app designed for developers to easily save, manage, and share their code snippets. The app offers full CRUD functionality, allowing users to create, read, update, and delete snippets as needed. Additionally, users can explore and save snippets shared by other creators.",
-        "The UI/UX design focused on creating a clean and intuitive interface that allows developers to quickly access their snippets, search for new ones, and manage their collections efficiently. The app supports tagging and categorizing snippets, making it easier to find the right piece of code when needed.",
+        "This magnificent property is set back from the charming commune of Gingins.",
+        "This small Vaudois village, nestled in a green setting, is just a few minutes from Nyon. Enjoying a very private setting, yet only 15 minutes from Geneva and its international airport and 30 minutes from Lausanne, this estate will delight anyone looking for a unique and privileged location. Moreover, its proximity to the motorway network will make it easy for you to get around.",
       ],
       bulletPoints: [
-        "Full CRUD functionality for snippet management",
-        "User-friendly interface with tagging and categorization",
-        "Ability to save and explore snippets from other creators",
-        "Responsive design for both desktop and mobile",
+        { label: "Bedrooms :", value: "10" },
+        { label: "Interior :", value: "18,298 Sq Ft." },
+        { label: "Exterior :", value: "10.11 Acre(s)" },
+        { label: "Price :", value: "Price Upon Request" },
       ],
-      images: [imageSm1, imageSm1, imageSm1],
+      images: [imageSm6, imageSm2, imageSm4, imageSm5, imageSm3],
       footer: "Try SnippetMaster: [SnippetMaster App](https://www.example.com)",
     },
   },
   {
     id: 2,
-    category: "Branding",
-    title: "Luxury Fashion Brand",
-    subtitle: "Redefining luxury with a modern touch",
+    category: "Colombia",
+    title: "Canalete , Bolivar, 130002 Colombia",
+    subtitle: "Extraordinary Development Opportunity in Cartagena, Bolívar ",
     date: "May 2023",
-    previewImage: imageSm1,
-    link: "luxury-fashion-brand",
+    previewImage: imageSm2_1,
+    link: "hacienda-canalete-cartagena-bv-130002",
     bgColor: "bg-[#6fcf97]",
-    client: "Elegance Fashion",
+    property_type: "Hacienda and Estancia Home",
+    locations: ["Hacienda Canalete-Colombia"],
     details: {
       paragraphs: [
         "We partnered with a high-end fashion brand to create a new identity that reflects luxury and elegance. Our branding strategy focused on minimalist design elements, sophisticated typography, and a monochrome color palette.",
         "The project also included the design of marketing collateral, including business cards, packaging, and a brand guideline document to ensure consistency across all platforms.",
       ],
       bulletPoints: [
-        "Minimalist logo design",
-        "Sophisticated typography",
-        "Monochrome color palette",
-        "Consistent brand guidelines",
+        { label: "Bedrooms :", value: "10" },
+        { label: "Interior :", value: "18,298 Sq Ft." },
+        { label: "Exterior :", value: "10.11 Acre(s)" },
+        { label: "Price :", value: "Price Upon Request" },
       ],
-      images: [imageSm1, imageSm1, imageSm1],
+      images: [imageSm2_2, imageSm2_3, imageSm2_4, imageSm2_5],
       footer: "Discover more: [Luxury Fashion Brand](https://www.example.com)",
     },
   },
