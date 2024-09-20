@@ -4,7 +4,8 @@ import ServicesSection from "./Components/Sections/ServicesSection/ServicesSecti
 import AboutSection from "./Components/Sections/AboutSection/AboutSection";
 import ScrollingText from "./Components/ScrollingText/ScrollingText";
 import PortfolioSection from "./Components/Sections/PortfolioSection/PortfolioSection";
-import FaqSection from "./Components/FaqSection/FaqSection";
+import FaqSection from "./Components/Sections/FaqSection/FaqSection";
+import ContactSection from "./Components/Sections/ContactSection/ContactSection";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </div>
       <PortfolioSection />
       <FaqSection />
+      <ContactSection />
     </main>
   );
 }
