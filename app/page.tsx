@@ -6,6 +6,7 @@ import ScrollingText from "./Components/ScrollingText/ScrollingText";
 import PortfolioSection from "./Components/Sections/PortfolioSection/PortfolioSection";
 import FaqSection from "./Components/Sections/FaqSection/FaqSection";
 import ContactSection from "./Components/Sections/ContactSection/ContactSection";
+import FooterSection from "./Components/Sections/FooterSection/FooterSection";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <PortfolioSection />
       <FaqSection />
       <ContactSection />
+      <FooterSection />
     </main>
   );
 }

@@ -157,3 +157,69 @@ export const faqs = [
       "As a rule of thumb, your monthly rent shouldn’t exceed 30% of your gross monthly income. This leaves 70% of your gross monthly income to cover other expenses.For example, if you make $50,000 per year and follow the “30% rule,” you’d have $15,000 annually - up to $1,250 per month - to spend on rent. This leaves $2,900 per month for all other expenses",
   },
 ];
+
+export const footerNavLinks = [
+  {
+    title: "About Us",
+    links: [
+      {
+        name: "Home",
+        url: "/",
+      },
+      {
+        name: "Services",
+        url: "#",
+      },
+      {
+        name: "About",
+        url: "#",
+      },
+      {
+        name: "Portfolio",
+        url: "#",
+      },
+      {
+        name: "FAQs",
+        url: "#",
+      },
+      {
+        name: "Contact",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Services",
+    links: [
+      {
+        name: "Properties by Lifestyle",
+        url: "",
+      },
+      {
+        name: "Properties by Destination",
+        url: "",
+      },
+      {
+        name: "Properties with Videos",
+        url: "",
+      },
+    ],
+  },
+  {
+    title: "Contact Info",
+    links: [
+      {
+        name: "Email",
+        email: "info@testmail.com",
+      },
+      {
+        name: "Phone",
+        phone: "+1234567890",
+      },
+      {
+        name: "Address",
+        address: "123, Street Name, City, Country",
+      },
+    ],
+  },
+];

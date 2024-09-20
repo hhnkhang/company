@@ -37,6 +37,10 @@ h1 {
 h3 {
   @apply text-xl font-bold text-gray-200;
 }
+input,
+textarea {
+  @apply bg-transparent border-2 border-colour-2 rounded-xl;
+}
 
 .gradient-green {
   display: inline-block;
