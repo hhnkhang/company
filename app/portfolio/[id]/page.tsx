@@ -4,6 +4,7 @@ import { div } from "framer-motion/client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import FooterSection from "@/app/Components/Sections/FooterSection/FooterSection";
 interface Props {
   params: {
     id: string;
@@ -21,7 +22,7 @@ function page({ params }: Props) {
     );
   }
   return (
-    <div className="py-[5rem] mq-sections ">
+    <section className="py-[5rem] mq-sections ">
       <div className="flex flex-col gap-8">
         <Title title={portfolio.title} label={portfolio.category} />
         <div className="mt-[5rem] flex justify-center">
@@ -119,7 +120,8 @@ function page({ params }: Props) {
           </div>
         </div>
       </div>
-    </div>
+      <FooterSection />
+    </section>
   );
 }
 
