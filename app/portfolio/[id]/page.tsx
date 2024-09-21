@@ -14,6 +14,7 @@ function page({ params }: Props) {
   const { id } = params;
   const portfolio = portfolios.find((portfolio) => portfolio.link === id);
   const imagesLength = portfolio?.details?.images?.length || 0;
+
   if (!portfolio) {
     return (
       <div className="text-4xl font-bold text-center mt-20">
@@ -21,6 +22,7 @@ function page({ params }: Props) {
       </div>
     );
   }
+
   return (
     <section className="py-[5rem] mq-sections ">
       <div className="flex flex-col gap-8">
@@ -88,34 +90,18 @@ function page({ params }: Props) {
             </div>
           </div>
 
-          {/* <div>
-            <Link href={portfolio.link} className="text-blue-500">
-              <p>{portfolio.details.footer}</p>
-            </Link>
-          </div> */}
+          {/* Grid layout for images */}
           <div className="flex flex-col">
-            <div className="flex gap-8">
-              {portfolio.details.images
-                .slice(0, imagesLength - 1)
-                .map((image, index) => {
-                  return (
-                    <div>
-                      <Image
-                        src={image}
-                        alt={portfolio.title}
-                        className="rounded-md object-cover"
-                      />
-                    </div>
-                  );
-                })}
-            </div>
-
-            <div className="mt-8">
-              <Image
-                src={portfolio.details.images[imagesLength - 1]}
-                alt={portfolio.title}
-                className="rounded-md object-cover"
-              />
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-2 mt-8">
+              {portfolio.details.images.map((image, index) => (
+                <div key={index}>
+                  <Image
+                    src={image}
+                    alt={portfolio.title}
+                    className="rounded-md object-cover w-full h-auto"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
